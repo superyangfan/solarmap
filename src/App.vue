@@ -24,7 +24,7 @@
                     </el-menu>
                 </el-aside>
                 <el-main class="sys-content">
-                    <Mapview />
+                    <router-view> </router-view>
                 </el-main>
             </el-container>
         </el-container>
@@ -32,11 +32,22 @@
 </template>
 
 <script>
-import Mapview from './components/common/Mapview';
+//import Mapview from './components/common/Mapview';
 export default {
     name: 'App',
     components: {
-        Mapview,
+        //Mapview,
+    },
+    methods: {
+        handleMenuSelect(index) {
+            if (index === '1') {
+                //跳转到首页大屏
+                this.$router.push('/');
+            } else if (index === '2') {
+                //跳转到一张图
+                this.$router.push('onemap');
+            }
+        },
     },
 };
 </script>
