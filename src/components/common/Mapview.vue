@@ -14,6 +14,7 @@ export default {
     name: 'Mapview',
     components: {},
     mounted: function () {
+        console.log(this.$store.state._defaultView);
         this._createMapView();
     },
     methods: {
@@ -31,7 +32,7 @@ export default {
                 center: [116.394637, 39.885149],
             });
             view.ui.components = [];
-
+            //this.$store.commit('', view);
             console.log(view);
         },
     },
