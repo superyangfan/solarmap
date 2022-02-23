@@ -45,7 +45,7 @@ export default {
                 this.$router.push('/');
             } else if (index === '2') {
                 //跳转到一张图
-                this.$router.push('onemap');
+                this.$router.push('/onemap');
             }
         },
     },
