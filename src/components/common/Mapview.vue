@@ -19,7 +19,7 @@ export default {
     name: 'Mapview',
     components: {},
     mounted: function () {
-        console.log(this.$store.state._defaultView);
+        //console.log(this.$store.state._defaultView);
         this._createMapView();
     },
     methods: {
@@ -49,7 +49,7 @@ export default {
                 id: 'basemap',
             });
             const map = new Map({
-                basemap,
+                //basemap,
             });
 
             const mapView = new MapView({
@@ -81,8 +81,8 @@ export default {
             });
             mapView.ui.add(zoom);
             mapView.ui.components = [];
-            //this.$store.commit('', view);
-            console.log(mapView);
+            this.$store.commit('_setDefaultMapView', mapView);
+            //console.log(this.$store.getters._getDefaultMapView);
         },
     },
 };

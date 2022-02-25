@@ -5,17 +5,24 @@ Vue.use(Vuex);
 
 const state = {
     _defaultView: '4444', //默认地图view
+    _defaultMapTreeVisible: 'flase', //地图目录树显示切换
 }
 
 const getters = {
-    _getDefaultView() {
+    _getDefaultMapView() {
         return state._defaultView;
+    },
+    _getDefaultMapTreeVisible() {
+        return state._defaultMapTreeVisible;
     }
 }
 
 const mutations = {
-    _setDefaultView(state, value) {
+    _setDefaultMapView(state, value) {
         state._defaultView = value;
+    },
+    _setDefaultMapTreeVisible(state, value) {
+        state._defaultMapTreeVisible = value;
     }
 }
 
